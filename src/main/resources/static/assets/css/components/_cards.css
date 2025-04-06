@@ -1,0 +1,88 @@
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.score-card {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-info img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.match-score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 60px;
+  text-align: center;
+}
+
+.match-score.live {
+  color: var(--success);
+  position: relative;
+}
+
+.match-score.live::after {
+  content: '●';
+  color: var(--success);
+  font-size: 0.8rem;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}/* Empty State */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-light);
+}
+
+.empty-state i {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+/* Favorite Star */
+.btn-favorite.active i {
+  color: gold;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Error Card */
+.error-card {
+  grid-column: 1 / -1;
+  background: #ffeeee;
+  color: var(--error);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}

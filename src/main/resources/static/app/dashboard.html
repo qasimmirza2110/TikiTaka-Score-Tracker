@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Scores | TikiTaka</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/components/_navbar.css">
+  <link rel="stylesheet" href="/assets/css/components/_cards.css">
+  <link rel="stylesheet" href="/assets/css/pages/_dashboard.css">
+  <link rel="stylesheet" href="/assets/css/dark-mode.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="/assets/images/favicon.ico">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container flex justify-between align-center">
+      <a href="/app/dashboard.html" class="logo">
+        <img src="/assets/images/logo-sm.png" alt="TikiTaka">
+      </a>
+      
+      <div class="nav-actions flex gap-1">
+        <label class="dark-mode-toggle">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </label>
+        <a href="/auth/login.html" class="btn btn-outline">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-2">
+    <div class="score-header flex justify-between align-center">
+      <h1 class="page-title">⚽ Live Scores</h1>
+      <button id="refreshBtn" class="btn btn-icon">
+        <i class="fas fa-sync-alt"></i> Refresh
+      </button>
+    </div>
+    
+    <div id="scoreContainer" class="score-grid">
+      <!-- Scores will be loaded here -->
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.2/dist/sockjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+  <script src="/assets/js/lib/api.js"></script>
+  <script src="/assets/js/lib/websocket.js"></script>
+  <script src="/assets/js/pages/dashboard.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | TikiTaka</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/components/_navbar.css">
+  <link rel="stylesheet" href="/assets/css/dark-mode.css">
+  <link rel="icon" href="/assets/images/favicon.ico">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container flex justify-between align-center">
+      <a href="/app/dashboard.html" class="logo">
+        <img src="/assets/images/logo-sm.png" alt="TikiTaka">
+      </a>
+      
+      <div class="nav-actions flex gap-1">
+        <label class="dark-mode-toggle">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </label>
+        <a href="/auth/login.html" class="btn btn-outline">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-2">
+    <div class="profile-card card">
+      <div class="profile-header flex align-center gap-2">
+        <img src="/assets/images/avatar.png" alt="Profile" class="profile-avatar">
+        <h1 id="profileUsername">Loading...</h1>
+      </div>
+      
+      <div class="profile-details">
+        <h2>Favorite Teams</h2>
+        <div id="favoriteTeams" class="flex wrap gap-1 py-1">
+          <!-- Favorites will load here -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/assets/js/lib/api.js"></script>
+  <script src="/assets/js/pages/profile.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

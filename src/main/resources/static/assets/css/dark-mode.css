@@ -1,0 +1,18 @@
+[data-theme="dark"] {
+  --primary: #4895ef;
+  --text: #f8f9fa;
+  --background: #121212;
+  --white: #1e1e1e;
+  --gray: #2d2d2d;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .navbar {
+  background-color: var(--white);
+  border-color: #333;
+}
+
+[data-theme="dark"] .auth-card {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
